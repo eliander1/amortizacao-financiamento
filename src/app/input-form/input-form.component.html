@@ -1,0 +1,31 @@
+<form [formGroup]="dadosForm" (ngSubmit)="onSubmit()" class="form-inputs">
+
+  
+  <div class="form-group">
+    <label for="valorFinanciado" class="ui-inputgroup-addon">Valor Financiado:</label>
+    <input type="number" id="valorFinanciado" formControlName="valorFinanciado" required>
+  </div>
+
+  <div class="form-group">
+    <label for="taxaJuros">Taxa de Juros anual(%):</label>
+    <input type="number" id="taxaJuros" formControlName="taxaJuros" required>
+  </div>
+
+  <div class="form-group">
+    <label for="correcaoIPCATR">Correção anual IPCA / TR (%):</label>
+    <input type="number" id="correcaoIPCATR" formControlName="correcaoIPCATR" required>
+  </div>
+
+  <div class="form-group">
+    <label for="prazoPagamento">Prazo de Pagamento (meses):</label>
+    <input type="number" id="prazoPagamento" formControlName="prazoPagamento" required>
+  </div>
+
+  <div class="form-group">
+    <label for="valorPagamentoMensal">Valor que desejo pagar:</label>
+    <input type="number" id="valorPagamentoMensal" formControlName="valorPagamentoMensal">
+   </div>
+
+    <button type="submit" [disabled]="!dadosForm.valid">Calcular</button>
+  </form>
+  
