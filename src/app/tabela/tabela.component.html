@@ -1,9 +1,9 @@
 
-<p>Resultado </p>
-<p-table [value]="listaParcelas" [responsive]="true">
+
+<p-table  *ngIf="listaParcelas.length > 0" [value]="listaParcelas" [responsive]="true">
     <ng-template pTemplate="header">
       <tr>
-        <th>Mês</th>
+        <th >Mês</th>
         <th>Juros</th>
         <th>Amortização</th>
         <th>Prestação</th>
